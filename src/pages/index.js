@@ -174,6 +174,7 @@ export default function Home() {
     setContactForm({ firstName: '', lastName: '', email: '', message: '' });
   };
 
+
   const attractions = [
     {
       title: "Petronas Twin Towers",
