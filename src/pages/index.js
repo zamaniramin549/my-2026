@@ -178,7 +178,7 @@ export default function Home() {
     {
       title: "Petronas Twin Towers",
       description: "The iconic 88-story twin skyscrapers dominating Kuala Lumpur's skyline, offering breathtaking views and world-class shopping experiences.",
-      image: "https://images.unsplash.com/photo-1596422846543-75c6fc197f07?w=800&q=80"
+      image: "/13.png"
     },
     {
       title: "Langkawi Islands",
@@ -209,42 +209,41 @@ export default function Home() {
 
   const experiences = [
     {
-      icon: "🍜",
+      icon: "/7.jpeg",
       title: "Culinary Paradise",
       description: "Savor the incredible fusion of Malay, Chinese, Indian, and Peranakan cuisines. From street food to fine dining, Malaysia is a food lover's dream destination."
     },
     {
-      icon: "🏝️",
+      icon: "/6.jpeg",
       title: "Tropical Islands",
       description: "Explore over 800 islands with pristine beaches, world-class diving spots, and luxurious resorts. From Langkawi to Perhentian Islands, paradise awaits."
     },
     {
-      icon: "🌳",
+      icon: "/3.jpeg",
       title: "Rainforest Adventures",
       description: "Trek through some of the world's oldest rainforests, home to orangutans, tigers, and exotic wildlife. Experience nature at its most magnificent."
     },
     {
-      icon: "🕌",
+      icon: "/8.jpeg",
       title: "Cultural Mosaic",
       description: "Immerse yourself in a harmonious blend of cultures. Visit mosques, temples, churches, and experience festivals that celebrate Malaysia's diversity."
     },
     {
-      icon: "🏙️",
+      icon: "/10.jpeg",
       title: "Modern Marvels",
       description: "Marvel at futuristic architecture in Kuala Lumpur, shop in mega malls, and experience the perfect blend of tradition and modernity."
     },
     {
-      icon: "🎭",
+      icon: "/12.jpeg",
       title: "Arts & Heritage",
       description: "Discover traditional crafts, vibrant street art, museums, and cultural performances that showcase Malaysia's rich artistic heritage."
-    }
+    },
   ];
 
   return (
     <div className={`${geistSans.className} bg-black text-white overflow-x-hidden cursor-none`}>
       {/* Custom Cursor Effect - EXPLOSIVE Dragon Tail */}
 
-      {/* Trail Effect - Dragon Tail */}
       {mouseTrail.map((point, index) => {
         const progress = index / mouseTrail.length;
         const size = 40 - (index * 1.8); // Larger decreasing size
@@ -292,8 +291,19 @@ export default function Home() {
       <nav className="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-lg border-b border-white/10">
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="text-2xl font-bold bg-gradient-to-r from-yellow-400 via-red-500 to-blue-600 bg-clip-text text-transparent">
-              Visit Malaysia 2026
+            <div className="flex items-center gap-3">
+              <a className="flex items-center gap-3 group">
+                <Image
+                  src='/Logo.png'
+                  width={50}
+                  height={50}
+                  alt="Logo"
+                  className="object-contain"
+                />
+                <span className="text-2xl font-bold bg-gradient-to-r from-yellow-400 via-red-500 to-blue-600 bg-clip-text text-transparent">
+                  Madani Rasa Sayang
+                </span>
+              </a>
             </div>
           </div>
           <div className="hidden md:flex gap-8">
@@ -345,19 +355,19 @@ export default function Home() {
             </div>
             <h1 className="text-6xl md:text-8xl font-bold mb-6 animate-slide-up">
               <span className="bg-gradient-to-r from-yellow-400 via-red-500 to-blue-600 bg-clip-text text-transparent animate-gradient">
-                Visit Malaysia 2026
+                Madani Rasa Sayang Experience
               </span>
             </h1>
             <p className="text-2xl md:text-3xl text-gray-200 max-w-4xl mx-auto mb-4 animate-slide-up-delayed font-semibold">
-              Truly Asia, Truly Unforgettable
+              #FeelTheLove
             </p>
             <p className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto mb-8 animate-slide-up-delayed">
-              Discover the perfect harmony of cultures, cuisines, and natural wonders. Experience a nation where tradition meets modernity, and every journey creates memories that last a lifetime.
+              A Malaysian <b>Truly Asian</b> Showcase of traditional Arts, Music and Dance, mirroring the unity within diversity and the togetherness of Malaysia's Society. The Concept of Madani Rasa Sayang is our gift to the World.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-slide-up-more-delayed">
               <a
                 href="#register"
-                className="group relative px-8 py-4 bg-gradient-to-r from-yellow-500 via-red-500 to-red-600 rounded-full font-semibold text-lg overflow-hidden transition-all hover:scale-105 hover:shadow-2xl hover:shadow-yellow-500/50"
+                className="group relative px-8 py-4 bg-yellow-500 rounded-full font-semibold text-lg overflow-hidden transition-all hover:scale-105 hover:shadow-2xl hover:shadow-yellow-500/50 text-black"
               >
                 <span className="relative z-10">Register for Updates</span>
                 <div className="absolute inset-0 bg-gradient-to-r from-red-600 to-yellow-500 opacity-0 group-hover:opacity-100 transition-opacity"></div>
@@ -389,7 +399,7 @@ export default function Home() {
           <div className="text-center mb-16">
             <h2 className="text-5xl md:text-6xl font-bold mb-6">
               <span className="bg-gradient-to-r from-yellow-400 to-red-600 bg-clip-text text-transparent">
-                About Malaysia
+                Road to Ghent
               </span>
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -457,7 +467,7 @@ export default function Home() {
           <div className="text-center mb-16">
             <h2 className="text-5xl md:text-6xl font-bold mb-6">
               <span className="bg-gradient-to-r from-yellow-400 to-red-600 bg-clip-text text-transparent">
-                Must-Visit Attractions
+                Madani Rasa Sayang Show
               </span>
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -522,17 +532,36 @@ export default function Home() {
             {experiences.map((exp, i) => (
               <div
                 key={i}
-                className={`stagger-item group p-8 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm rounded-2xl border border-white/10 hover:border-red-500/50 transition-all hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-red-500/20`}
+                className={`stagger-item group bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm rounded-3xl border border-white/10 overflow-hidden hover:border-red-500/50 transition-all hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-red-500/20`}
               >
-                <div className="text-6xl mb-6 group-hover:scale-110 transition-transform">
-                  {exp.icon}
+                {/* Large Visual Container */}
+                <div className="relative h-64 w-full bg-white/5 flex items-center justify-center overflow-hidden">
+                  {exp.icon.startsWith('/') || exp.icon.startsWith('http') ? (
+                    <Image
+                      src={exp.icon}
+                      alt={exp.title}
+                      fill
+                      className="object-cover group-hover:scale-110 transition-transform duration-700"
+                    />
+                  ) : (
+                    /* Large Emoji Display for non-image items */
+                    <span className="text-8xl group-hover:scale-125 transition-transform duration-500">
+                      {exp.icon}
+                    </span>
+                  )}
+                  {/* Subtle overlay to make text pop if needed */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 </div>
-                <h3 className="text-2xl font-bold mb-4 group-hover:text-yellow-400 transition-colors">
-                  {exp.title}
-                </h3>
-                <p className="text-gray-400 leading-relaxed">
-                  {exp.description}
-                </p>
+
+                {/* Content Area */}
+                <div className="p-8">
+                  <h3 className="text-2xl font-bold mb-4 group-hover:text-yellow-400 transition-colors">
+                    {exp.title}
+                  </h3>
+                  <p className="text-gray-400 leading-relaxed">
+                    {exp.description}
+                  </p>
+                </div>
               </div>
             ))}
           </div>
@@ -729,7 +758,7 @@ export default function Home() {
           <div className="grid md:grid-cols-4 gap-8 mb-8">
             <div className="md:col-span-2">
               <h3 className="text-3xl font-bold bg-gradient-to-r from-yellow-400 via-red-500 to-blue-600 bg-clip-text text-transparent mb-4">
-                Visit Malaysia 2026
+                MadaVisit Malaysia 2026
               </h3>
               <p className="text-gray-400 mb-4">
                 Experience the magic of Malaysia - where diverse cultures, stunning landscapes, and warm hospitality create unforgettable memories.
